@@ -1,23 +1,17 @@
-import axios from 'axios'
-import React from 'react'
+import axios from "axios";
+import React, { useState } from "react";
+import Product from "./Product";
 
 const Home = () => {
-    const data =axios.get('https://fakestoreapi.com/products/')
-    .then(res=>console.log(res.data))
-  return (
-    <>
-    <div>Home</div>
-    <div>
-        {
-            data.map(item=>{
-                
-                    <p>{item.title}</p>
-               
-            })
-        }
-    </div>
-        </>
-  )
-}
+  const [product, setProduct] = useState([]);
+  const data = axios
+    .get("https://fakestoreapi.com/products/")
+    .then((res) => setProduct(res.data))
+    .catch((err) => console.log(err));
+  return (<>
+  <p1>E-Commerce-App</p1>
+  <Product item={product}/>
+  </>)
+};
 
-export default Home
+export default Home;
