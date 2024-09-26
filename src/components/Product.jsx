@@ -1,29 +1,32 @@
-import React from 'react'
+import React from "react";
 
-const Product = ({item}) => {
+const Product = ({ item }) => {
   return (
-    <div className="bg-slate-800 w-screen   rounded-xl ">
-    {item.map((item, index) => (
-      <div
-        key={index}
-        className="
-        bg-slate-500
-        rounded-lg
-              
-        
-           w-60
-            py-10 my-20"
-      >
-        <div>
-          <img src={item.image} className="w-28" />
-        </div>
-        <div className="text-lg">{item.title}</div>
-        <div>{item.description.substring(0, 50) + "..."}</div>
-        <div>${item.price}</div>
-      </div>
-    ))}
-  </div>
-  )
-}
+    <div className="w-screen  flex flex-row flex-wrap justify-center   rounded-xl ">
+      {item.map((item, index) => (
+        <div key={index} className="bg-orange-100 rounded-lg w-72 m-2 py-10 ">
+          <div className="flex justify-center items-center rounded-md  pt-5">
+            <img src={item.image} className=" h-52 " />
+          </div>
+          <div className=" p-2 flex flex-col items-center">
+            <div className="text-lg font-bold">{item.title}</div>
+            <div className="text-sm font-semibold">
+              {item.description.substring(0, 150) + "..."}
+            </div>
+            <div className="bg-orange-400 w-full  h-12 ">
+              <div className="text-lg font-medium text-white">
+                ${item.price}
+              </div>
+            </div>
+            <div>
+            <button class="px-4 py-2 m-2 bg-orange-500 text-white rounded hover:bg-green-600" type="Add to cart">Add to Cart</button>
 
-export default Product
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default Product;
