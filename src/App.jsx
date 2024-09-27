@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 import Home from './components/Home'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import LoginPage from './components/LoginPage'
-import Register from './components/Register'
+import RegisterPage from './components/RegisterPage'
 
 
 const router = createBrowserRouter([
@@ -18,7 +18,7 @@ const router = createBrowserRouter([
   },
   {
     path:"/register",
-    element:<Register/>
+    element:<RegisterPage/>
   },
 ])
 
