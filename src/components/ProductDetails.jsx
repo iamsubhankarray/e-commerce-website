@@ -1,19 +1,23 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom'
+import NavBar from './NavBar'
 
 const ProductDetails = () => {
   const location= useLocation()
   
   return (
-    <div className='flex justify-center items-center mx-52 shadow-lg '>
+    <>
+    <NavBar/>
+    
+    <div className='flex justify-center items-center mx-52 '>
 
     <div className=' bg-orange-500
      flex flex-col justify-center
-      items-center 
-      w-96
-      rounded-3xl
-      overflow-auto
-      '>
+     items-center 
+     w-96
+     rounded-3xl
+     overflow-auto
+     m-5 px-5'>
       <img
       className='w-60'
       src={location.state.image}/>
@@ -26,6 +30,7 @@ const ProductDetails = () => {
 
     </div>
       </div>
+      </>
   )
 }
 
