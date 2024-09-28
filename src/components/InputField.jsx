@@ -1,6 +1,6 @@
 import React from 'react'
 
-const IInputField = ({title}) => {
+const InputField = ({title}) => {
   return (
     <div>
        
@@ -8,4 +8,4 @@ const IInputField = ({title}) => {
   )
 }
 
-export default IInputField
+export default InputField

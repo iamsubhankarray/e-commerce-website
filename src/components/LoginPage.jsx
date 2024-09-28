@@ -31,7 +31,7 @@ const LoginPage = () => {
         my-2"
           type="email"
           name=""
-          id=""
+          id="email"
           placeholder="enter your email"
           value={email}
           onChange={(text) => setEmail(text.target.value)}
@@ -45,12 +45,12 @@ const LoginPage = () => {
         my-2"
           type="password"
           name=""
-          id=""
+          id="password"
           placeholder="enter your password"
           value={password}
           onChange={(text) => setpassword(text.target.value)}
         />
-        <button onAuxClick={()=>getLogin(email,password)} className="bg-green-500 hover:bg-green-200 w-20 h-10">
+        <button onClick={()=>getLogin(email,password)} className="bg-green-500 hover:bg-green-200 w-20 h-10">
           login 
         </button>
       </div>

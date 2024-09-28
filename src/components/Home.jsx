@@ -19,7 +19,7 @@ const Home = () => {
     <NavBar/>
     <div className="flex justify-center">
 
-      <p1 className="text-4xl p-5">E-Commerce-App</p1>
+      <h1 className="text-4xl p-5">E-Commerce-App</h1>
     </div>
       <Product item={product} />
     </>
