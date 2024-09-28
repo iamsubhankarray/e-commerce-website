@@ -5,13 +5,27 @@ const ProductDetails = () => {
   const location= useLocation()
   
   return (
-    <div className=' justify-center items-center w-1/2'>
-      <h1>{location.state.title}</h1>
+    <div className='flex justify-center items-center mx-52 shadow-lg '>
+
+    <div className=' bg-orange-500
+     flex flex-col justify-center
+      items-center 
+      w-96
+      rounded-3xl
+      overflow-auto
+      '>
       <img
+      className='w-60'
       src={location.state.image}/>
-      <h5>{location.state.description}</h5>
+      <h1 className='font-extrabold text-xl text-center'>{location.state.title}</h1>
+      <h5 className='font-bold text-m'>{location.state.description}</h5>
+      <h5 className='font-bold text-2xl'>${location.state.price}</h5>
+      <button className='bg-lime-300  rounded-md m-5 shadow-lg'>
+        <span className='text-2xl font-bold'>add to cart</span>
+      </button>
 
     </div>
+      </div>
   )
 }
 
