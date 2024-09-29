@@ -13,6 +13,7 @@ const RegisterPage = () => {
     }
   };
   return (
+    <>
     <div className=" w-screen h-screen flex justify-center items-center">
       <div className="flex flex-col justify-center items-center w-96 h-1/2 bg-slate-300 rounded-md shadow-lg">
         <h1 className="text-center text-2xl font-bold text-white ">Register</h1>
@@ -53,6 +54,7 @@ const RegisterPage = () => {
         </button>
       </div>
     </div>
+            </>
   );
 };
 
