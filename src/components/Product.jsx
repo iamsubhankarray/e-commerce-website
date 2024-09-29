@@ -1,14 +1,21 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import { Navigate, useNavigate, useNavigation } from "react-router-dom";
+import {add_to_cart} from '../redux/cartSlice'
 
 const Product = ({ item }) => {
   const navigate = useNavigate();
+  const dispatch = useDispatch()
   const handleClick = (item) => {
     
     navigate("/ProductDetails", { state:item, });
   };
-  const handleAddtoCart=(e)=>{
+  const handleAddtoCart=(e,item)=>{
     e.stopPropagation()
+    dispatch(add_to_cart(item))
+    // console.log(item);
+    
+
     
   }
   return (
@@ -33,7 +40,7 @@ const Product = ({ item }) => {
                 </div>
               </div>
               <div >
-                <button onClick={(e)=>handleAddtoCart(e)}
+                <button onClick={(e)=>handleAddtoCart(e,item)}
                   className="px-4 py-2 m-2 bg-orange-500 text-white rounded hover:bg-green-600"
                   type="Add to cart"
                 >
