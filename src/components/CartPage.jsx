@@ -10,25 +10,30 @@ function CartPage() {
 
   return (
     <>
-      <div className="w-screen h-screen flex flex-col justify-center items-center">
+      <div className="w-screen  flex flex-col justify-center items-center">
         <div className="  justify-center items-center">
           {cartItem.length>0?
             cartItem.map((item, index) => {
               return (
                 <div
                   key={index}
-                  className="flex flex-col justify-center items-center"
-                >
+                  className="flex  justify-center items-center" >
                   <img src={item.image} className="w-2/12" />
-                  <h1>{item.title.substring(0, 20)}</h1>
+                  <div>
+
+                  <h2 className="font-2xl">{item.title.substring(0, 50)}</h2>
                   <h2>{item.description.substring(0, 200)}</h2>
-                  <h1>{item.price}</h1>
+                  <h2 className="text-xl font-bold">${item.price}</h2>
+                  <div className="flex justify-end bg-slate-100">
                   <button
-                    className="bg-green-600"
+                    className="bg-green-600 text-white h-10 "
                     onClick={() => dispatch(remove_from_cart(item))}
-                  >
-                    Remove from cart
+                    >
+
+                    <h1 className="font-2xl">Remove from cart</h1>
                   </button>
+                      </div>
+                    </div>
                 </div>
               );
             }):null}

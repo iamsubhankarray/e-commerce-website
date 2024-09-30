@@ -22,7 +22,7 @@ const ImageSlideshow = ({products}) => {
         width: "screen",
         height: "768",
         textAlign: "center",
-        overflow:"clip",
+        // overflow:"clip",
         background:"pink",
         
       }}
@@ -30,7 +30,7 @@ const ImageSlideshow = ({products}) => {
       <img
         src={images[currentIndex]}
         alt={`Image ${currentIndex + 1}`}
-        style={{  maxHeight: 256 }}
+        style={{  maxHeight: 512 }}
       />
       
     </div>
