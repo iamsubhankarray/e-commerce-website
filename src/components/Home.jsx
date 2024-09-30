@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Product from "./Product";
+import Slider from './Slider'
 import NavBar from "./NavBar";
 
 const Home = () => {
@@ -29,12 +30,11 @@ const Home = () => {
           placeholder="Product search"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="border-x-yellow-700 border-8 w-60"
-        />
+          className="border-yellow-500 border-4 w-80"
+          />
       </div>
-      <div className="flex justify-center">
-        <h1 className="text-4xl p-5">E-Commerce-App</h1>
-      </div>
+          <Slider products={products}/>
+    
       <Product item={filteredData} />
     </>
   );

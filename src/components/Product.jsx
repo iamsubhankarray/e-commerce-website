@@ -13,7 +13,6 @@ const Product = ({ item }) => {
   const handleAddtoCart=(e,item)=>{
     e.stopPropagation()
     dispatch(add_to_cart(item))
-    // console.log(item);
     
 
     
@@ -35,7 +34,7 @@ const Product = ({ item }) => {
                 {item.description.substring(0, 150) + "..."}
               </div>
               <div className="bg-orange-400 w-full  h-12 ">
-                <div className="text-lg font-medium text-white">
+                <div className="text-lg text-center font-medium text-white">
                   ${item.price}
                 </div>
               </div>

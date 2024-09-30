@@ -13,9 +13,9 @@ const LoginPage = () => {
       setLogged(await account.get());
       setEmail("")
       setpassword("")
-      console.log(logged);
+      console.log(logged)
     } catch (error) {
-      console.log(error);
+      console.log(error)
       
     }
   }

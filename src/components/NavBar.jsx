@@ -11,11 +11,12 @@ const NavBar = () => {
   }
   return (
     <div>
-        <ul className='flex justify-end  bg-orange-500 w-screen h-20 text-xl text-white items-center px-10 font-bold'>
-          <li className='px-3' onClick={()=>navigate('/')}>home</li>
-          <li className='px-3'>category</li>
+        <ul className='flex justify-end  bg-orange-500 w-screen h-10 text-xl text-white items-center px-10 font-bold'>
+            <li className='absolute left-20'>e-commerce website</li>
+          <li className='px-10' onClick={()=>navigate('/')}>home</li>
+          <li className='px-10'>category</li>
           
-          <li className='px-3'>  about</li>
+          <li className='px-10'>  about</li>
          
           <li  onClick={gotocart}>
             <div className='flex
