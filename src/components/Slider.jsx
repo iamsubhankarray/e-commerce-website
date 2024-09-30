@@ -23,7 +23,7 @@ const ImageSlideshow = ({products}) => {
         height: "768",
         textAlign: "center",
         overflow:"clip",
-        background:"grey,"
+        background:"pink",
         
       }}
     >
