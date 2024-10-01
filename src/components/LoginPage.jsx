@@ -1,19 +1,22 @@
 import React, { useState } from "react";
 import NavBar from './NavBar'
 import { account } from "../lib/appwrite";
+import { useDispatch } from "react-redux";
+import { logIn_user } from "../redux/userSclice";
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setpassword] = useState("");
   const [logged, setLogged] = useState(null);
+  const dispatch = useDispatch()
 
   async function getLogin(email, password) {
     try {
-      await account.createEmailPasswordSession(email, password);
-      setLogged(await account.get());
+      await account.createEmailPasswordSession(email,password);
+      dispatch(logIn_user(await account.get('userId')));
+
       setEmail("")
       setpassword("")
-      console.log(logged)
     } catch (error) {
       console.log(error)
       

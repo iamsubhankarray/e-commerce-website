@@ -3,10 +3,12 @@ import React, { useEffect, useState } from "react";
 import Product from "./Product";
 import Slider from "./Slider";
 import NavBar from "./NavBar";
+import { useSelector } from "react-redux";
 
 const Home = () => {
   const [products, setProducts] = useState([]);
   const [search, setSearch] = useState("");
+  const logged = useSelector(state=>state.user)
   const filteredData = products.filter((item) =>
     item.title.toLowerCase().includes(search.toLowerCase())
   );
@@ -20,6 +22,11 @@ const Home = () => {
   useEffect(() => {
     getData();
   }, [filteredData]);
+  // // if (logged?) {
+    
+  // }
+  console.log(logged);
+  
 
   return (
     <>
