@@ -1,12 +1,15 @@
 import React, { useState } from "react";
-import NavBar from "./NavBar";
 import CartItems from "./CartItems";
 import { useDispatch, useSelector } from "react-redux";
 import { remove_from_cart } from "../redux/cartSlice";
+import { useNavigate } from "react-router-dom";
 
 function CartPage() {
   const cartItem = useSelector((state) => state.cart);
   const dispatch = useDispatch();
+  const navigate = useNavigate()
+  
+  const totalAmount= cartItem.reduce((a,b)=>a+b.price,0)
 
   return (
     <>
@@ -38,6 +41,10 @@ function CartPage() {
               );
             }):null}
         </div>
+        <div >total amount ${totalAmount}</div>
+        <button onClick={()=>navigate('checkOut')}className="bg-yellow-600  w-20 hover: bg-green-600">
+          check-out
+        </button>
       </div>
     </>
   );

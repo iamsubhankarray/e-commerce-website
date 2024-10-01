@@ -25,7 +25,6 @@ const Home = () => {
   // // if (logged?) {
     
   // }
-  console.log(logged);
   
 
   return (

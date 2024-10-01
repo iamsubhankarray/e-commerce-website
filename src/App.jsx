@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import LoginPage from "./components/LoginPage";
 import RegisterPage from "./components/RegisterPage";
 import ProductDetails from "./components/ProductDetails";
+import CheckOut from "./components/checkOut";
 import { Provider } from "react-redux";
 import store from "./redux/store";
 import CartPage from "./components/CartPage";
@@ -28,6 +29,11 @@ const router = createBrowserRouter([
     path: "/ProductDetails",
 
     element: <ProductDetails />,
+  },
+  {
+    path: "/cart/CheckOut",
+
+    element: <CheckOut />,
   },
 ]);
 
